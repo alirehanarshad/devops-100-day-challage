@@ -1,0 +1,65 @@
+# Day 2 – Linux User Management (Temporary User with Expiry)
+
+## Task
+
+As part of a temporary assignment to the Nautilus project, a developer named **ammar** required access for a limited duration. The task was to create a temporary user account with an expiry date on **App Server 2**.
+
+---
+
+## Objective
+
+* Create a user named `ammar`
+* Set account expiry date to **2027-04-15**
+* Ensure username is in lowercase
+* Verify that the account expiry is set correctly
+
+---
+
+## Commands Used
+
+### 1. SSH into App Server 2
+
+```bash
+ssh user@app-server2
+```
+
+### 2. Create user with expiry date
+
+```bash
+sudo useradd -e 2027-04-15 ammar
+```
+
+### 3. Set password for the user
+
+```bash
+sudo passwd ammar
+```
+
+### 4. Verify account expiry date
+
+```bash
+sudo chage -l ammar
+```
+
+---
+
+## Expected Output
+
+```
+Account expires : Apr 15, 2027
+```
+
+---
+
+## What I Learned
+
+* How to create a temporary Linux user
+* How to set an account expiry date
+* How to verify user account details
+* Basic Linux user management
+
+---
+
+## Day 2 Completed ✅
+
+Learning Linux administration step by step as part of my DevOps journey.
