@@ -1,0 +1,27 @@
+# Day 1: KodeKloud Linux Lab – Non-Interactive User Creation
+
+## Overview
+This is my Day 1 practice lab from KodeKloud. The main task was to create a user on an App Server with a **non-interactive shell** using SSH and sudo. This lab helped me understand:
+
+- SSH connections to remote servers
+- Non-interactive vs interactive shells
+- Using `sudo` non-interactively
+- User management in Linux (`useradd`, `usermod`)
+- Lab troubleshooting and verification
+
+---
+
+## Lab Details
+
+### Task
+- Create user `yousuf` on `App Server 2` (`stapp02`)  
+- User must have **non-interactive shell** (`/sbin/nologin`)  
+- Perform task via **non-interactive SSH commands** from `jump-host`  
+
+---
+
+## Commands Used
+
+### 1. Create user via SSH
+```bash
+ssh -tt steve@stapp02 "echo 'Am3ric@' | sudo -S useradd yousuf"
